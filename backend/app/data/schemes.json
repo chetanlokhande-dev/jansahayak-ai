@@ -1,0 +1,222 @@
+{
+  "_meta": {
+    "label": "SAMPLE DATA - for development and testing only",
+    "disclaimer": "These entries are short, simplified summaries written for testing the app. They are NOT an official or complete record and may be incomplete or out of date. Always confirm details on the official source link before acting. Replace this file with data ingested from verified government sources before any real deployment.",
+    "data_status": "sample"
+  },
+  "schemes": [
+    {
+      "id": "pm-kisan",
+      "name": "PM-KISAN (Pradhan Mantri Kisan Samman Nidhi)",
+      "category": "agriculture",
+      "ministry": "Ministry of Agriculture & Farmers Welfare",
+      "summary": "Income support for landholding farmer families, paid directly into the bank account.",
+      "benefits": [
+        "Rs 6,000 per year, paid in three instalments of Rs 2,000 each, roughly every four months",
+        "Money is transferred directly to the beneficiary's bank account"
+      ],
+      "eligibility_text": [
+        "Farmer family that owns cultivable agricultural land",
+        "Certain higher-income and institutional categories are excluded (for example income-tax payers) - check the official guidelines for the full list"
+      ],
+      "required_documents": ["Aadhaar", "Land ownership records", "Bank account details"],
+      "how_to_apply": [
+        "Register on the official PM-KISAN portal, or visit a Common Service Centre (CSC)",
+        "You can also contact your local agriculture / revenue officer",
+        "Keep Aadhaar, land records and bank details ready"
+      ],
+      "criteria": [
+        {"field": "owns_agricultural_land", "op": "eq", "value": true, "label": "Your family owns cultivable agricultural land"}
+      ],
+      "exclusions": [
+        {"field": "pays_income_tax", "op": "eq", "value": true, "label": "You do not pay income tax"}
+      ],
+      "official_url": "https://pmkisan.gov.in/",
+      "source_name": "PM-KISAN official portal",
+      "keywords": ["farmer", "farmers", "kisan", "agriculture", "land", "crop", "किसान", "खेती", "शेतकरी", "शेती"],
+      "data_status": "sample"
+    },
+    {
+      "id": "ab-pmjay",
+      "name": "Ayushman Bharat PM-JAY (health cover)",
+      "category": "health",
+      "ministry": "Ministry of Health & Family Welfare (National Health Authority)",
+      "summary": "Health insurance cover for hospital treatment for eligible families, and for senior citizens aged 70 and above.",
+      "benefits": [
+        "Cashless hospital treatment cover of up to Rs 5 lakh per family per year at empanelled hospitals",
+        "Senior citizens aged 70 and above are covered under the extension of the scheme"
+      ],
+      "eligibility_text": [
+        "Families identified through the scheme's deprivation and occupation criteria (use the official portal to check whether you are listed)",
+        "Senior citizens aged 70 and above"
+      ],
+      "required_documents": ["Aadhaar or other ID", "Ration card or proof of family listing (as asked)", "Age proof for senior citizens"],
+      "how_to_apply": [
+        "Check your name or family on the official PM-JAY portal or helpline",
+        "Visit an empanelled hospital's Ayushman Mitra desk or a CSC to complete verification and get the card",
+        "Details for senior citizens are on the official portal"
+      ],
+      "criteria": [
+        {
+          "label": "You are aged 70 or above, OR your family is listed as eligible under PM-JAY",
+          "any_of": [
+            {"field": "age", "op": "gte", "value": 70, "label": "Age 70 or above"},
+            {"field": "pmjay_listed", "op": "eq", "value": true, "label": "Family is listed as eligible"}
+          ]
+        }
+      ],
+      "exclusions": [],
+      "official_url": "https://pmjay.gov.in/",
+      "source_name": "Ayushman Bharat PM-JAY official portal",
+      "keywords": ["health", "hospital", "insurance", "treatment", "ayushman", "medical", "senior", "स्वास्थ्य", "अस्पताल", "आरोग्य", "रुग्णालय"],
+      "data_status": "sample"
+    },
+    {
+      "id": "sukanya-samriddhi",
+      "name": "Sukanya Samriddhi Yojana (girl child savings)",
+      "category": "women-and-children",
+      "ministry": "Ministry of Finance (Department of Economic Affairs)",
+      "summary": "A small-savings account for the future education and marriage expenses of a girl child.",
+      "benefits": [
+        "Long-term savings account in the girl child's name with a government-notified interest rate (the rate changes - check the current rate officially)",
+        "Deposit limits apply per financial year; see the official rules"
+      ],
+      "eligibility_text": [
+        "Account is opened in the name of a girl child, usually before she turns 10",
+        "Opened by a parent or legal guardian"
+      ],
+      "required_documents": ["Birth certificate of the girl child", "ID and address proof of the parent or guardian"],
+      "how_to_apply": [
+        "Visit any post office or authorised bank that offers the scheme",
+        "Fill in the account opening form and submit the documents with the first deposit"
+      ],
+      "criteria": [
+        {"field": "has_girl_child_under_10", "op": "eq", "value": true, "label": "You have a girl child under 10 years of age"}
+      ],
+      "exclusions": [],
+      "official_url": "https://www.nsiindia.gov.in/",
+      "source_name": "National Savings Institute",
+      "keywords": ["girl", "daughter", "savings", "sukanya", "beti", "बेटी", "बालिका", "मुलगी", "बचत"],
+      "data_status": "sample"
+    },
+    {
+      "id": "atal-pension",
+      "name": "Atal Pension Yojana (APY)",
+      "category": "pension",
+      "ministry": "Ministry of Finance (administered through PFRDA)",
+      "summary": "A pension scheme mainly for workers in the unorganised sector, with a fixed monthly pension after age 60.",
+      "benefits": [
+        "Guaranteed monthly pension of Rs 1,000 to Rs 5,000 from age 60, depending on the amount and age at which you start contributing"
+      ],
+      "eligibility_text": [
+        "Age 18 to 40",
+        "Must have a savings bank account",
+        "Income-tax payers are not eligible to join (rule in force since October 2022)"
+      ],
+      "required_documents": ["Savings bank account / passbook", "Aadhaar", "Mobile number"],
+      "how_to_apply": [
+        "Visit the bank branch where you have a savings account, or use your bank's net-banking / mobile app if offered",
+        "Choose your pension amount and contribution frequency"
+      ],
+      "criteria": [
+        {"field": "age", "op": "gte", "value": 18, "label": "You are at least 18 years old"},
+        {"field": "age", "op": "lte", "value": 40, "label": "You are not older than 40"},
+        {"field": "has_bank_account", "op": "eq", "value": true, "label": "You have a savings bank account"}
+      ],
+      "exclusions": [
+        {"field": "pays_income_tax", "op": "eq", "value": true, "label": "You do not pay income tax"}
+      ],
+      "official_url": "https://www.pfrda.org.in/",
+      "source_name": "Pension Fund Regulatory and Development Authority",
+      "keywords": ["pension", "retirement", "old", "age", "unorganised", "पेंशन", "बुढ़ापा", "निवृत्तीवेतन", "पेन्शन"],
+      "data_status": "sample"
+    },
+    {
+      "id": "pm-mudra",
+      "name": "PM Mudra Yojana (small business loans)",
+      "category": "business",
+      "ministry": "Ministry of Finance",
+      "summary": "Collateral-free loans for small and micro non-farm businesses, given through banks and other lenders.",
+      "benefits": [
+        "Loans up to Rs 10 lakh without collateral",
+        "Three categories: Shishu (up to Rs 50,000), Kishore (Rs 50,000 to 5 lakh), Tarun (Rs 5 lakh to 10 lakh)"
+      ],
+      "eligibility_text": [
+        "Individuals or small enterprises running or starting a non-farm income-generating business such as a shop, workshop or service"
+      ],
+      "required_documents": ["ID and address proof", "Business plan or proof of the activity", "Bank account details"],
+      "how_to_apply": [
+        "Apply at a bank, NBFC or microfinance institution that offers Mudra loans",
+        "Use the official Mudra portal to find participating lenders"
+      ],
+      "criteria": [
+        {"field": "has_nonfarm_business", "op": "eq", "value": true, "label": "You run or plan a small non-farm business"}
+      ],
+      "exclusions": [],
+      "official_url": "https://www.mudra.org.in/",
+      "source_name": "MUDRA official portal",
+      "keywords": ["loan", "business", "shop", "mudra", "enterprise", "self-employed", "ऋण", "कर्ज", "व्यापार", "दुकान", "व्यवसाय"],
+      "data_status": "sample"
+    },
+    {
+      "id": "pm-jdy",
+      "name": "PM Jan Dhan Yojana (basic bank account)",
+      "category": "financial-inclusion",
+      "ministry": "Ministry of Finance (Department of Financial Services)",
+      "summary": "A zero-balance basic bank account with a debit card and insurance benefit for people who do not have a bank account.",
+      "benefits": [
+        "Basic savings account with no minimum balance",
+        "RuPay debit card with accident insurance cover",
+        "Direct transfer of government benefits into the account"
+      ],
+      "eligibility_text": [
+        "Any individual aged 10 or above who does not already have a bank account"
+      ],
+      "required_documents": ["Aadhaar or other officially valid ID", "Passport-size photo (if asked)"],
+      "how_to_apply": [
+        "Visit any bank branch or a Bank Mitra / business correspondent",
+        "Fill the account opening form with your KYC documents"
+      ],
+      "criteria": [
+        {"field": "age", "op": "gte", "value": 10, "label": "You are at least 10 years old"},
+        {"field": "has_bank_account", "op": "eq", "value": false, "label": "You do not yet have a bank account"}
+      ],
+      "exclusions": [],
+      "official_url": "https://pmjdy.gov.in/",
+      "source_name": "PMJDY official portal",
+      "keywords": ["bank", "account", "jan dhan", "zero balance", "खाता", "बैंक", "जन धन", "खाते"],
+      "data_status": "sample"
+    },
+    {
+      "id": "mgnrega",
+      "name": "MGNREGA (rural wage employment)",
+      "category": "employment",
+      "ministry": "Ministry of Rural Development",
+      "summary": "A legal guarantee of wage employment for rural households whose adult members are willing to do unskilled manual work.",
+      "benefits": [
+        "Up to 100 days of guaranteed wage employment per rural household in a financial year",
+        "Wages are paid to the worker's bank or post office account"
+      ],
+      "eligibility_text": [
+        "Adult member (18+) of a rural household",
+        "Willing to do unskilled manual work",
+        "The household must register with the Gram Panchayat and get a job card"
+      ],
+      "required_documents": ["Passport-size photo", "Proof of identity / residence for the Gram Panchayat", "Bank or post office account details"],
+      "how_to_apply": [
+        "Apply for a job card at your Gram Panchayat",
+        "Then submit a written or oral application for work to the Gram Panchayat"
+      ],
+      "criteria": [
+        {"field": "age", "op": "gte", "value": 18, "label": "You are an adult (18 or above)"},
+        {"field": "residence", "op": "eq", "value": "rural", "label": "You live in a rural area"},
+        {"field": "willing_manual_work", "op": "eq", "value": true, "label": "You are willing to do unskilled manual work"}
+      ],
+      "exclusions": [],
+      "official_url": "https://nrega.nic.in/",
+      "source_name": "MGNREGA official portal",
+      "keywords": ["job", "employment", "work", "wage", "rural", "nrega", "mgnrega", "unemployed", "रोजगार", "मजदूरी", "नौकरी", "काम", "ग्रामीण"],
+      "data_status": "sample"
+    }
+  ]
+}

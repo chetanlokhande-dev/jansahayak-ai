@@ -1,0 +1,137 @@
+{
+  "_meta": {
+    "label": "SAMPLE DATA - for development and testing only",
+    "disclaimer": "Simplified plain-language summaries for testing. They are NOT legal advice and may be incomplete. Confirm with the official source or a legal aid authority.",
+    "data_status": "sample"
+  },
+  "rights": [
+    {
+      "id": "right-to-information",
+      "title": "Right to Information (RTI)",
+      "category": "governance",
+      "summary": "You can ask any central or state public authority for information, and they must reply within a fixed time.",
+      "key_points": [
+        "Write an application to the Public Information Officer (PIO) of the department. You do not need to give a reason for asking.",
+        "A reply is normally due within 30 days. Many central-government applications can be filed online through the RTI online portal.",
+        "A small application fee applies for central public authorities (Rs 10); people below the poverty line are exempt.",
+        "If you do not get a reply or are unhappy with it, you can file a first appeal and then a second appeal."
+      ],
+      "what_to_do": [
+        "Write what information you want clearly",
+        "Submit to the right department's PIO with the fee",
+        "Keep the receipt and the date"
+      ],
+      "law": "Right to Information Act, 2005",
+      "official_url": "https://rti.gov.in/",
+      "source_name": "RTI portal (Government of India)",
+      "keywords": ["rti", "information", "ask", "application", "office", "reply", "सूचना", "जानकारी", "माहिती", "अधिकार"],
+      "data_status": "sample"
+    },
+    {
+      "id": "free-legal-aid",
+      "title": "Free legal aid",
+      "category": "legal",
+      "summary": "Certain people are entitled to a free lawyer and free legal services.",
+      "key_points": [
+        "Legal services authorities provide free legal aid to eligible persons, such as women, children, members of Scheduled Castes and Scheduled Tribes, persons in custody, persons with disabilities, and people below an income limit set by the state.",
+        "Services can include a lawyer, court-fee support and advice.",
+        "Legal Services Authorities exist at the national, state, district and taluka levels."
+      ],
+      "what_to_do": [
+        "Contact the District or Taluka Legal Services Authority",
+        "Or approach NALSA through its official portal or helpline",
+        "Carry ID and any papers related to your case"
+      ],
+      "law": "Legal Services Authorities Act, 1987",
+      "official_url": "https://www.nalsa.gov.in/",
+      "source_name": "National Legal Services Authority (NALSA)",
+      "keywords": ["lawyer", "legal", "aid", "free", "court", "advocate", "वकील", "कानूनी", "मुफ्त", "मोफत", "न्यायालय"],
+      "data_status": "sample"
+    },
+    {
+      "id": "rights-when-arrested",
+      "title": "Your rights if you are arrested",
+      "category": "legal",
+      "summary": "The Constitution gives basic protections to anyone who is arrested.",
+      "key_points": [
+        "You must be told the reason (grounds) for your arrest.",
+        "You have the right to consult and be defended by a lawyer of your choice.",
+        "You must be produced before a magistrate within 24 hours of arrest, not counting travel time.",
+        "You cannot be forced to give evidence against yourself."
+      ],
+      "what_to_do": [
+        "Stay calm and ask for the reason for arrest",
+        "Ask to contact a lawyer or a family member",
+        "If you cannot afford a lawyer, ask for free legal aid"
+      ],
+      "law": "Constitution of India, Articles 20 and 22, and criminal procedure law",
+      "official_url": "https://legislative.gov.in/",
+      "source_name": "Legislative Department",
+      "keywords": ["arrest", "police", "custody", "magistrate", "detained", "गिरफ्तार", "पुलिस", "अटक", "पोलीस"],
+      "data_status": "sample"
+    },
+    {
+      "id": "right-to-education",
+      "title": "Right to Education",
+      "category": "education",
+      "summary": "Free and compulsory education is a fundamental right for children aged 6 to 14.",
+      "key_points": [
+        "Every child aged 6 to 14 has the right to free and compulsory elementary education in a neighbourhood school.",
+        "Private schools must reserve a share of seats (25 percent at the entry level) for children from economically weaker and disadvantaged groups, with the state reimbursing the fees.",
+        "No child can be refused admission for lack of documents such as a birth or transfer certificate."
+      ],
+      "what_to_do": [
+        "Approach the nearest government school or the Block Education Officer",
+        "Watch for your state's admission notice for reserved seats in private schools"
+      ],
+      "law": "Constitution of India, Article 21A, and the Right of Children to Free and Compulsory Education Act, 2009",
+      "official_url": "https://legislative.gov.in/",
+      "source_name": "Legislative Department",
+      "keywords": ["education", "school", "child", "admission", "rte", "शिक्षा", "स्कूल", "शाळा", "प्रवेश"],
+      "data_status": "sample"
+    },
+    {
+      "id": "consumer-rights",
+      "title": "Consumer rights",
+      "category": "consumer",
+      "summary": "If you were sold a defective product or given poor service, you can seek a remedy.",
+      "key_points": [
+        "You have the right to be protected against unsafe or defective goods and unfair trade practices, and to be informed about the quality and price of what you buy.",
+        "You can complain to a Consumer Commission at the district, state or national level depending on the claim value.",
+        "The National Consumer Helpline can help resolve issues before you file a case, and complaints can be filed online."
+      ],
+      "what_to_do": [
+        "Keep the bill, warranty card and messages",
+        "Write to the seller first, then call the consumer helpline",
+        "File a complaint with the District Consumer Commission if unresolved"
+      ],
+      "law": "Consumer Protection Act, 2019",
+      "official_url": "https://consumerhelpline.gov.in/",
+      "source_name": "National Consumer Helpline",
+      "keywords": ["consumer", "refund", "defective", "product", "shop", "complaint", "उपभोक्ता", "ग्राहक", "शिकायत", "तक्रार"],
+      "data_status": "sample"
+    },
+    {
+      "id": "filing-a-police-complaint",
+      "title": "Filing a police complaint (FIR)",
+      "category": "legal",
+      "summary": "Police are expected to register information about a serious (cognizable) offence, and you can get a copy for free.",
+      "key_points": [
+        "You can report a serious offence at a police station, and the information should be written down and read back to you.",
+        "You are entitled to a free copy of the First Information Report (FIR).",
+        "If the police refuse to register it, you can send the information in writing to the Superintendent of Police or approach a magistrate.",
+        "Information about an offence can usually be given at any police station, even if the incident happened elsewhere; the police then transfer it."
+      ],
+      "what_to_do": [
+        "Go to the nearest police station with the details written down",
+        "Ask for a free copy of the FIR and note the FIR number",
+        "If refused, write to the Superintendent of Police"
+      ],
+      "law": "Criminal procedure law (Bharatiya Nagarik Suraksha Sanhita, 2023)",
+      "official_url": "https://legislative.gov.in/",
+      "source_name": "Legislative Department",
+      "keywords": ["fir", "police", "complaint", "report", "crime", "theft", "शिकायत", "पुलिस", "एफआईआर", "पोलीस", "तक्रार"],
+      "data_status": "sample"
+    }
+  ]
+}

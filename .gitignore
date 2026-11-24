@@ -1,0 +1,28 @@
+# Environment & Secrets (NEVER commit API keys)
+.env
+*.env
+backend/.env
+
+# Python virtual environments & cache
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Node dependencies & build artifacts
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+
+# Local databases & logs
+*.db
+jansahayak.db
+*.log
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+.idea/
