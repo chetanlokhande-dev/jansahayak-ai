@@ -1,5 +1,6 @@
 // All calls go to the FastAPI backend. No secrets live in the browser.
-const BASE = import.meta.env.VITE_API_BASE || '';
+const RAW_BASE = import.meta.env.VITE_API_BASE || '';
+const BASE = RAW_BASE.replace(/\/+$/, '');
 
 function getClientId() {
   try {
@@ -26,7 +27,8 @@ async function request(path, { method = 'GET', body, form } = {}) {
   let res;
   try {
     res = await fetch(`${BASE}${path}`, { method, headers, body: payload });
-  } catch {
+  } catch (err) {
+    console.error(`[API Error] Request to ${BASE}${path} failed:`, err);
     throw new Error('Cannot reach the server. Please check that the backend is running and try again.');
   }
   let data = null;
