@@ -304,7 +304,20 @@ from pathlib import Path
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 
-# ---------- serve frontend SPA if built ----------
+# ---------- root & SPA ----------
+
+@app.get("/")
+def root():
+    if FRONTEND_DIST.exists():
+        return FileResponse(FRONTEND_DIST / "index.html")
+    return {
+        "status": "ok",
+        "app": APP_NAME,
+        "tagline": TAGLINE,
+        "docs": "/docs",
+        "health": "/api/health"
+    }
+
 
 FRONTEND_DIST = Path(__file__).resolve().parent.parent.parent / "frontend" / "dist"
 if FRONTEND_DIST.exists():
